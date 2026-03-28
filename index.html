@@ -1,0 +1,63 @@
+     <center>
+        <div>
+            <h2>LET'S PLAY WITH ME🤖🥅</h2>
+            <h1>Guess the number</h1>
+            <input id="guessnumber">
+            <button onclick="Check()">Check</button>
+            <p id="result">You are Wrong/Right</p>
+            <p id="score">Score:10</p>
+        </div>
+            <script>
+                var guessnumber=document.getElementById("guessnumber")
+                var result=document.getElementById("result")
+                var score=document.getElementById("score")
+                var randomnumber=Math.floor(Math.random()*10)+1
+                var totalscore=10
+                function Check()
+                {
+                    var enterednumber=guessnumber.value
+                    if(randomnumber==enterednumber)
+                    {
+                        console.log("Right")
+                        result.textContent="Right"
+                        alert("YOU WON...🎉✨🎊")
+                    }
+                    else{
+                        totalscore=totalscore-1
+                        score.textContent="Score:"+totalscore
+                        result.textContent="Wrong"
+                    }
+                
+                }
+                
+                
+            </script>
+
+
+        
+        <style>
+            h1{
+                color: red;
+                font-style: italic;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            div{
+                background-color: aqua;
+                border-style: dotted;
+                border-radius: 70px;
+                border-width: 10px;
+                border-color: blueviolet;
+            }
+            p{
+                font-family: fantasy;
+                color: darkgoldenrod;
+            }
+            h2{
+                font-size: larger;
+                font-family: 'Times New Roman', Times, serif;
+                color: purple;
+            }
+        </style>
+    </center>
+ 
+
